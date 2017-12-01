@@ -6,12 +6,13 @@ calc(input);
 function calc(input) {
     let list = _.split(input, '');
     let sum = 0;
+    let length = list.length;
     _.forEach(list, (item, index) => {
-        let beforeIndex = index - 1;
-        if (beforeIndex < 0) {
-            beforeIndex = list.length - 1;
+        let otherIndex = (length / 2) + index;
+        if (otherIndex >= length) {
+            otherIndex -= length;
         }
-        let before = list[beforeIndex];
+        let before = list[otherIndex];
         if (item === before) {
             sum += _.parseInt(item);
         }
