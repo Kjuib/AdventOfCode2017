@@ -20,7 +20,7 @@ function isGood(line) {
         ;
     });
 
-    let isValid = lineList.length ===_.uniq(lineList).length;
+    let isValid = lineList.length === _.uniq(lineList).length;
     console.log(line, isValid);
 
     return isValid;
